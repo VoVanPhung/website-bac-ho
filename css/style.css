@@ -299,4 +299,17 @@ body.p8{background:#f1e6c7;--dur:1.9s}
 .center{max-width:820px;margin:0 auto;text-align:center}
 .center p{margin-bottom:1.1em}
 .sticky{position:sticky;top:calc(var(--hd) + 24px)}
+/* FIX: Giữ tiêu đề Hero trên một dòng ở máy tính */
 html,body,main{overflow-x:clip}
+.hero h1 {
+    white-space: nowrap;
+    font-size: clamp(30px, 4vw, 52px);
+}
+
+/* Điện thoại: cho phép tiêu đề xuống dòng */
+@media (max-width: 768px) {
+    .hero h1 {
+        white-space: normal;
+        font-size: clamp(28px, 7vw, 38px);
+    }
+}
